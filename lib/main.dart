@@ -1,5 +1,7 @@
 // Dart imports:
 import 'dart:math';
+import 'package:flutter/services.dart';
+
 
 // Flutter imports:
 import 'package:flutter/foundation.dart';
@@ -24,6 +26,15 @@ final getIt = GetIt.instance;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
+    statusBarColor: Colors.transparent,
+    statusBarIconBrightness: Brightness.dark,
+    statusBarBrightness: Brightness.dark,
+    systemNavigationBarColor: Colors.transparent,
+    systemNavigationBarIconBrightness: Brightness.dark,
+    systemNavigationBarDividerColor: Colors.transparent,
+  ));
   await configInjector(getIt);
   getIt<RecurringRepository>().checkForRecurring();
   runApp(const PaisaApp());
