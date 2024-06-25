@@ -1,4 +1,4 @@
-const gitHubUrl = 'https://github.com/h4h13/paisa';
+const gitHubUrl = 'https://github.com/RetroMusicPlayer/Paisa';
 const playStoreUrl =
     'https://play.google.com/store/apps/details?id=dev.hemanths.paisa';
 const telegramGroupUrl = 'https://t.me/app_paisa';
@@ -30,4 +30,5 @@ const String excludedAccountIdKey = 'excluded_account_key';
 const String calendarFormatKey = 'calendar_format_key';
 const String appLanguageKey = 'app_language_key';
 const String appFontChangerKey = 'app_font_changer_key';
+const String userAccountsStyleKey = 'user_account_style_changer_key';
 const buyMeCoffeeUrl = 'https://www.buymeacoffee.com/h4h13';

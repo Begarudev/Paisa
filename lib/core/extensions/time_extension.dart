@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 // Package imports:
-import 'package:hive/hive.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:intl/intl.dart';
 
 // Project imports:
@@ -24,7 +24,8 @@ extension DateUtils on DateTime {
   String get formattedTime => DateFormat('hh:mm a').format(this);
   String get dayString => DateFormat('dd').format(this);
   String get weekString => DateFormat('EEE').format(this);
-  String get shortDayString => DateFormat('dd EEE • hh:mm a').format(this);
+  String get monthString => DateFormat('MMM').format(this);
+  String get shortDayString => DateFormat('EEE dd MMM • hh:mm a').format(this);
 
   bool get isToday {
     final now = DateTime.now();
